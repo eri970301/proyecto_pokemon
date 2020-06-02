@@ -3,6 +3,7 @@
         "browser": true,
         "es6": true
     },
+<<<<<<< HEAD
     "extends": ["react-app", "prettier"],
     "parserOptions": {
         "ecmaVersion": 11
@@ -11,6 +12,18 @@
     "rules": {
         "semi": "error",
         "prettier/prettier":[
+=======
+    "extends": [ "react-app", "prettier"],
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "plugins": [
+        "react", "prettier"
+    ],
+    "rules": {
+        "semi": "error",
+        "prettier/prettier": [
+>>>>>>> origin
             "error",
             {
                 "printWidth": 80,
