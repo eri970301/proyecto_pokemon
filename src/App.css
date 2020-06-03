@@ -4,3 +4,7 @@
 .body{
   background-color: aquamarine;
 }
+.modal-90w{
+  min-width: 90vw;
+  height: 90vh;
+}

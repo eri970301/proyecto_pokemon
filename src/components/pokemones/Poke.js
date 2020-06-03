@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
+import Pokemon from '../secundaria/Pokemon'
 
 class Contenido extends Component {
     constructor(props){
         super(props)
         this.state = {
-            plants: []
+            plants: [],
+            name: "bulbasaur"
         }
 }
 render () {
+    //Variable para mandat a Pokemon
+    let {name} = this.state
     return (
     
     <CardDeck>
@@ -51,8 +55,10 @@ render () {
       </Card.Body>
       <Card.Footer>
         <small className="text-muted">Last updated 3 mins ago</small>
+        <Pokemon name={name}/>
       </Card.Footer>
     </Card>
+    
   </CardDeck>
     )
 }
