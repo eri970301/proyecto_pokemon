@@ -22,7 +22,18 @@ class Body extends Component {
       pokemon: pokemon.results,
     });
   }
+  /*buscador = (e) => {
+    let busca = document.querySelector('#input_search').value.toLowerCase()
+    for (let pokemon of pokemon){
+      let name = pokemon.name.toLowerCase
+      if(name.indexOf(busca) !== -1){
+        this.setState({
+          pokemon: pokemon
+        })
+      }*/
+   // let arr = pokemon.filter((elemento)=>{
 
+    //})
   render() {
     return (
       <div className="body">
@@ -32,9 +43,9 @@ class Body extends Component {
               placeholder="Recipient's username"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
-            />
+             id="input_search"/>
             <InputGroup.Append>
-              <Button variant="outline-secondary">Button</Button>
+              <Button variant="outline-secondary" onClick = {this.buscador}>Search</Button>
             </InputGroup.Append>
           </InputGroup>
         </div>

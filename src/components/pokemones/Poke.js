@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import Pokemon from '../secundaria/Pokemon'
 import "./../../App.css";
 
 class Contenido extends Component {
@@ -36,7 +36,7 @@ class Contenido extends Component {
     let response = await fetch (url_species)
     let poke = await response.json();
 
-    console.log(url_species)
+    console.log(poke)
 
   }
 
@@ -57,9 +57,7 @@ class Contenido extends Component {
                 })}
               </div>
             </Card.Text>
-            <Button variant="danger" className="btn_cards">
-              See PokeCard
-            </Button>
+            <Pokemon className="d-flex justify-content-center" name={name} img={img} abilities= {abilities} id={id} weight={weight} height={height} />
           </Card.Body>
         </Card>
       </div>
@@ -68,3 +66,5 @@ class Contenido extends Component {
 }
 
 export default Contenido;
+
+
