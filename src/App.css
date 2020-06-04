@@ -1,10 +1,49 @@
-.bckgr{
-  background: linear-gradient(90deg, rgba(24,10,11,1) 0%, rgba(20,197,222,1) 69%);
-}
-.body{
-  background-color: aquamarine;
-}
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
 .modal-90w{
   min-width: 90vw;
-  height: 90vh;
+  min-height: 90vh;
+  font-family: 'Patua One', cursive;
+}
+#modalHeader, #modalFooter{  
+  background-color: #BF6419;
+}
+#namePokemon{
+  font-size: 50px;
+}
+#modalBody{
+  background-color: rgb(202, 193, 149);
+  font-weight: bolder;
+}
+
+#Button{
+  color: #111010;
+  background-color: #ddc30c;
+  border-color: #f4f4f4;
+}
+#btn-Info{
+  background-color: #a81212;
+  border: 1px solid #a81212;
+  box-shadow: 1px 1px 5px black;
+}
+#card{
+  width: 30%;
+}
+.cardText{
+  background-color: #BF6419;
+}
+.cardName {
+  font-size: 20px;
+}
+#caractPokemon{
+  width: 100%;
+  margin: 2%;
+  background-color: white;
+
+}
+#information{
+  width: 100%;
+}
+.informationCol{
+  text-align: center;
 }

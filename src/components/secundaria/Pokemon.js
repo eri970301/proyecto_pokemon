@@ -22,35 +22,36 @@ class Pokemon extends Component {
 		})
 	}
 	render() {
-		let { name } = this.props
+		let {name, img, abilities, id, weight, height} = this.props
+
 		return (
 			<div>
-				<Button onClick={() => { this.handleModal() }}>Más Información</Button>
+				<Button  id="btn-Info" onClick={() => { this.handleModal() }}>Más Información</Button>
 				<Modal
 					show={this.state.show}
 					onHide={() => { this.handleModal() }}
 					dialogClassName="modal-90w"
 					centered>
-					<Modal.Header closeButton>
+					<Modal.Header id="modalHeader" closeButton>
 						<Modal.Title >
 							Pokemon
 						</Modal.Title>
 					</Modal.Header>
-					<Modal.Body>
+					<Modal.Body id="modalBody">
 						<Container fluid>
 							<Row className= "m-3">
-								<Col className="d-flex justify-content-center"><h2>{name}</h2></Col>
+								<Col className="d-flex justify-content-center"><h1 id="namePokemon">{name}</h1></Col>
 							</Row>
 							<Row>
-								<ImgPokemon/>
+								<ImgPokemon img={img} name={name}/>
 							</Row>
 							<Row>
-								<InfoPokemon/>
+								<InfoPokemon abilities={abilities} id={id} weight={weight} height={height}/>
 							</Row>
 						</Container>	
 					</Modal.Body>
-					<Modal.Footer>
-						<Button onClick={() => { this.handleModal() }}>Close Modal</Button>
+					<Modal.Footer id="modalFooter">
+						<Button id="Button" onClick={() => { this.handleModal() }}>Cerrar</Button>
 					</Modal.Footer>
 				</Modal>
 			</div>

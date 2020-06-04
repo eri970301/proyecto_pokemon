@@ -7,62 +7,51 @@ class Contenido extends Component {
     constructor(props){
         super(props)
         this.state = {
-            plants: [],
-            name: "bulbasaur"
+            img: "",
+            abilities: [],
+            id: "",
+            types: [],
+            weight: "",
+            height:"", 
+            name: ""
         }
+        
 }
-render () {
+
+async componentDidMount(){
+  let respuesta = await fetch('http://pokeapi.salestock.net/api/v2/pokemon/1/')
+  let pokemon = await respuesta.json()
+  this.setState({
+    img: pokemon.sprites.front_default,
+    abilities: pokemon.abilities,
+    id: pokemon.id,
+    types: pokemon.types,
+    weight: pokemon.weight,
+    height:pokemon.height,
+    name: pokemon.name
+  })
+
+  }
+  
+
+
+render () {    
     //Variable para mandat a Pokemon
-    let {name} = this.state
-    return (
-    
-    <CardDeck>
-    <Card>
-      <Card.Img variant="top" src="holder.js/100px160" />
-      <Card.Body>
-        <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </Card.Text>
-      </Card.Body>
-      <Card.Footer>
-        <small className="text-muted">Last updated 3 mins ago</small>
-      </Card.Footer>
-    </Card>
-    <Card>
-      <Card.Img variant="top" src="holder.js/100px160" />
-      <Card.Body>
-        <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          This card has supporting text below as a natural lead-in to additional
-          content.{' '}
-        </Card.Text>
-      </Card.Body>
-      <Card.Footer>
-        <small className="text-muted">Last updated 3 mins ago</small>
-      </Card.Footer>
-    </Card>
-    <Card>
-      <Card.Img variant="top" src="holder.js/100px160" />
-      <Card.Body>
-        <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This card has even longer content than the first to
-          show that equal height action.
-        </Card.Text>
-      </Card.Body>
-      <Card.Footer>
-        <small className="text-muted">Last updated 3 mins ago</small>
-        <Pokemon name={name}/>
-      </Card.Footer>
-    </Card>
-    
-  </CardDeck>
-    )
-}
+      let {name, img, abilities, id, types, weight, height} = this.state
+      return (
+        <Card style={{ width: '18rem' }} className="card_color">
+        <Card.Img variant="top" src={this.state.img}/>
+        <Card.Body>
+          <Card.Title>Pokemon</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the bulk of
+            the card's content.
+          </Card.Text>
+          <Pokemon className="d-flex justify-content-center" name={name} img={img} abilities= {abilities} id={id} weight={weight} height={height} />
+        </Card.Body>
+      </Card>
+      )
 
 }
-
+}
 export default Contenido
