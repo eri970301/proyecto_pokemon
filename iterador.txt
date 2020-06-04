@@ -1,0 +1,3 @@
+<div> {this.state.pokemon.map((pokemon)=>{
+      return( <Contenido {...pokemon}> </Contenido> )
+    })} </div>
