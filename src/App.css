@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
-<<<<<<< HEAD
 
 .modal-90w{
   min-width: 90vw;
@@ -47,7 +46,8 @@
 }
 .informationCol{
   text-align: center;
-=======
+}
+ 
 .bckgr{
   background-image: url("./components/principal/cartoon-funny-seamless-wide-fantasy-landscape.jpg");
   text-align: center;
@@ -78,5 +78,4 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-between;
->>>>>>> 44130d0cae6d310304dbeb7cf7882b7bce521e46
 }

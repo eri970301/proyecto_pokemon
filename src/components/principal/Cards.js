@@ -50,8 +50,4 @@ class Body extends Component {
   }
 }
 
-<<<<<<< HEAD
 export default Body;
-=======
-export default Body;
->>>>>>> 44130d0cae6d310304dbeb7cf7882b7bce521e46
