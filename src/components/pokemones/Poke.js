@@ -14,6 +14,7 @@ class Contenido extends Component {
       types: [],
       weight: "",
       height: "",
+      species: ""
     };
   }
 
@@ -28,9 +29,15 @@ class Contenido extends Component {
       id: pokemon.id,
       types: pokemon.types,
       weight: pokemon.weight,
-      height: pokemon.height,
+      height: pokemon.height
     });
-    console.log(url);
+
+    let url_species = ('http://pokeapi.salestock.net/api/v2/pokemon-species/1/')
+    let response = await fetch (url_species)
+    let poke = await response.json();
+
+    console.log(url_species)
+
   }
 
   render() {
@@ -45,12 +52,13 @@ class Contenido extends Component {
               {id}
               <div>
                 {types.map((types) => {
-                  return <p>{types.type.name}</p>;
+                  return <p>{types.type.name}
+                  </p>;
                 })}
               </div>
             </Card.Text>
             <Button variant="danger" className="btn_cards">
-              Go somewhere
+              See PokeCard
             </Button>
           </Card.Body>
         </Card>

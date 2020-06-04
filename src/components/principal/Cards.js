@@ -11,7 +11,6 @@ class Body extends Component {
     super(props);
     this.state = {
       pokemon: [],
-      name: "",
     };
   }
   async componentDidMount() {
