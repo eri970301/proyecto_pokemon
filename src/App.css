@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+<<<<<<< HEAD
 
 .modal-90w{
   min-width: 90vw;
@@ -46,4 +47,36 @@
 }
 .informationCol{
   text-align: center;
+=======
+.bckgr{
+  background-image: url("./components/principal/cartoon-funny-seamless-wide-fantasy-landscape.jpg");
+  text-align: center;
+  height: 26vh;
+  font-family: 'Patua One', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title{
+  font-size: 100px;
+}
+.body{
+  background-color: #BF6419;
+  padding: 1%;
+}
+.input_search{
+  margin: 3%;
+}
+.card_color{
+  background-color: rgb(202, 193, 149);
+}
+.btn_cards{
+  width: 100%;
+}
+.cards_each{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+>>>>>>> 44130d0cae6d310304dbeb7cf7882b7bce521e46
 }
