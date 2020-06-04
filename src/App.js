@@ -4,9 +4,7 @@ import './App.css'
 import Header from './components/principal/Header'
 import Body from './components/principal/Cards'
 
-
 function App () {
-
   return (
     <div className="App">
       <Header></Header>
@@ -14,4 +12,5 @@ function App () {
     </div>
   )
 }
+
 export default App
